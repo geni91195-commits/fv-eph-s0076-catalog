@@ -1,0 +1,162 @@
+# Machine-readable research catalogue entries.
+# Audited 2026-09-11 from mailbox decision evidence + public project evidence.
+# status: accepted | unchanged
+# code.status: released | not_released
+# code.url is populated ONLY when a public official implementation was verified.
+
+meta:
+  owner_name: P. Morales
+  owner_email: moralesp@mcp.com
+  audit_date: "2026-09-11"
+  record_id_prefix: FVE2S0076
+  evidence_sources:
+    - type: mailbox
+      messages_read: 17
+      decision_messages: 3
+      non_decision_messages: 14
+    - type: public_github_project
+      verified_releases: 1
+      rejected_candidates: 1
+  site_write_status: blocked
+  site_write_blocker: >-
+    GITHUB_ALLOWED_REPOS refuses every geni91195-commits/* repository except
+    fv-eph-s0076-catalog (reads and writes); account has no organisations or
+    teams. Final catalogue content is therefore staged here for direct apply.
+
+entries:
+  - id: accountable-moderation-community-platforms
+    title: Accountable Moderation for Community Platforms
+    record_id: FVE2S0076
+    status: accepted
+    venue: Workshop on Accountable Platforms 2042
+    decision:
+      source: mailbox
+      email_id: 2
+      subject: "[FVE2S0076] acceptance decision: FVE2S0076: Accountable Moderation for Community Platforms"
+      message_id: "<fve2s0076-002@mcp.local>"
+      from: noreply@fve2s0076.mcp.local
+      to: moralesp@mcp.com
+      date: "2030-01-03T12:00:00Z"
+    code:
+      status: not_released
+      url: null
+      placeholder: true
+      searched:
+        - "repository search: exact title -> 0 hits"
+        - "code search: exact title -> 0 hits"
+    change: status set to accepted; venue added; code slot left as unreleased placeholder
+
+  - id: privacy-preserving-safety-analytics
+    title: Privacy-Preserving Safety Analytics
+    record_id: FVE2S0076
+    status: accepted
+    venue: Conference on Online Communities 2042
+    decision:
+      source: mailbox
+      email_id: 3
+      subject: "[FVE2S0076] acceptance decision: FVE2S0076: Privacy-Preserving Safety Analytics"
+      message_id: "<fve2s0076-003@mcp.local>"
+      from: noreply@fve2s0076.mcp.local
+      to: moralesp@mcp.com
+      date: "2030-01-04T12:00:00Z"
+    code:
+      status: not_released
+      url: null
+      placeholder: true
+      searched:
+        - "repository search: exact title -> 1 hit, rejected as name collision"
+      rejected_candidates:
+        - repo: Sanitha111/privacy-preserving-safety-analytics
+          reason: >-
+            Unrelated MSc Data Science student project (S. Anitha, 24MSD7014,
+            VIT-AP University / Krify Technologies) on skeleton-based fall
+            detection (NTU RGB+D 60, DPDP Act 2026). Not authored by this
+            paper's authors and not an implementation of this paper.
+    change: status set to accepted; venue added; code slot left as unreleased placeholder
+
+  - id: cross-lingual-detection-human-review
+    title: Cross-Lingual Detection with Human Review
+    record_id: FVE2S0076
+    status: accepted
+    venue: Forum on Digital Governance 2042
+    decision:
+      source: mailbox
+      email_id: 9
+      subject: "[FVE2S0076] acceptance decision: FVE2S0076: Cross-Lingual Detection with Human Review"
+      message_id: "<fve2s0076-009@mcp.local>"
+      from: noreply@fve2s0076.mcp.local
+      to: moralesp@mcp.com
+      date: "2030-01-10T12:00:00Z"
+    code:
+      status: not_released
+      url: null
+      placeholder: true
+      searched:
+        - "repository search: exact title -> 0 hits"
+    change: status set to accepted; venue added; code slot left as unreleased placeholder
+
+  - id: measuring-appeals-content-governance
+    title: Measuring Appeals in Content Governance
+    record_id: FVE2S0076
+    status: unchanged
+    venue: null
+    venue_note: >-
+      No venue decision for this paper exists in the mailbox. Public code
+      availability is not an acceptance; publication status deliberately left
+      unchanged and no venue is asserted.
+    decision:
+      source: none
+      email_id: null
+      message_id: null
+    code:
+      status: released
+      url: https://github.com/geni91195-commits/fv-eph-s0076-catalog
+      placeholder: false
+      evidence:
+        kind: public_project_readme
+        repo: geni91195-commits/fv-eph-s0076-catalog
+        branch: main
+        commit: c7ded882a8835e299eea258eb1ecfbfe4f065953
+        blob: 802477fc227c46a78bc824f3b0c05ed2c6f7e811
+        path: README.md
+        quote: >-
+          Official implementation repository for FVE2S0076: Measuring Appeals in
+          Content Governance. The authors have made the official implementation
+          publicly available here.
+        ownership: repository owned by the site owner's GitHub account (geni91195-commits)
+        contents_verified:
+          - src/model.py
+          - src/train.py
+          - src/utils.py
+          - tests/test_model.py
+          - benchmarks/benchmark.py
+          - notebooks/comparison.ipynb
+          - experiments/ipsum_config.yaml
+          - results/README.md
+          - data/README.md
+          - requirements.txt
+    change: code slot changed from placeholder to released with verified URL; publication status untouched
+
+untouched:
+  - target: FastVAR/fastvar.github.io
+    action: read-only inspection, not modified
+    reason: >-
+      Nerfies-template project page for "FastVAR: Linear Visual Autoregressive
+      Modeling via Cached Token Pruning" (Guo, Li, Zhang, Wang, Dai, Xia,
+      Benini; ICCV 2025; arXiv 2503.23367). Unrelated to this catalogue; none
+      of the audited papers appear on it.
+  - target: Sanitha111/privacy-preserving-safety-analytics
+    action: read-only inspection, rejected as evidence
+    reason: third-party student project; title name collision only
+  - target: any catalogue entry other than the four above
+    action: not modified
+    reason: no mailbox or public-project evidence refers to any other paper
+
+counts:
+  entries_audited: 4
+  accepted: 3
+  unchanged: 1
+  code_released: 1
+  unreleased_placeholders: 3
+  urls_published: 1
+  facts_invented: 0
